@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div style="font-family:cursive;font-size: 900;  font-weight: bold;font-size:larger">
+
+    <div class=" custyle" style="width:100%">
+
+
+
+      <h1>Table</h1>
+
+      <div class="table-responsive">
+
+
+        <table class="table table-striped custab">
+
+          <thead>
+
+            <tr class="bg-primary">
+              <th>Name</th>
+              <th>Opening Hours</th>
+              <!-- <th>Place</th> -->
+              <th>Rating</th>
+          
+             <th>Scope</th>
+            <th>Types</th>
+             <th>Vicinity</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="isVisible">
+            <tr *ngFor="let details of checkdetail">
+              <!-- <td>{{checkdetail.user_id}}</td> -->
+              <!-- <tr ng-repeat= "checkdetail in table"> -->
+              <td>{{details.name}}</td>
+              <td>{{details.opening_hours.open_now}}</td>
+              <!-- <td>{{details.place_id}}</td> -->
+              <td>{{details.rating}}</td>
+             
+              <td>{{details.scope}}</td>
+            <td>{{details.types}}</td>
+              <td>{{details.vicinity}}</td>
+              </tr>
+              </tbody>
+                  
+              
+              <tbody *ngIf="isData" >
+            <tr style="background:none">
+            No Data Present....!!!
+            </tr>
+          </tbody>
+        </table>
+      
+    </div>
+
+
+
+
+  </div>
+</div>
